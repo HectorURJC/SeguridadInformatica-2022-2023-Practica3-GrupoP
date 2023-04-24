@@ -16,15 +16,24 @@ def encriptar_AES(cifrador, texto_desencriptado):
     solucion_encriptada = cifrador.encrypt(texto_padded)
     return solucion_encriptada.hex() # Lo convertimos a hexadecimal que es el formato correspondiente que tiene el mensaje original.
 
-clave = b'SeguridadInforma' # Se modifica el string a un array de bytes
-iv = b'SeguridadInforma' # Se modifica el string a un array de bytes
+texto_encriptado = input("Escriba el texto encriptado: \n").strip()
+clave = input("Escriba la clave: \n").strip()
+iv = input("Escriba el iv: \n").strip()
 
-texto_encriptado = "9bc43d7ec1aa11f64302287b17be9f7b"
+# Si el input del texto encriptado, clave y/o iv son vacíos, entonces se le pasa el texto encriptado, clave y/o iv del enunciado
+if texto_encriptado == "":
+    texto_encriptado = "9bc43d7ec1aa11f64302287b17be9f7b"
+if clave == "":
+    clave = 'SeguridadInforma' 
+if iv == "":
+    iv = 'SeguridadInforma' 
+clave = bytes(clave, 'utf-8') # Se modifica el string a un array de bytes
+iv = bytes(iv, 'utf-8') # Se modifica el string a un array de bytes
 
 # AES.new(clave, AES.MODE_CBC, iv) no se le puede asignar a una variable global porque no
 # se puede cifrar una vez que se ha usado la función decrypt() y lo mismo con encrypt()
 solucion_desencriptada = desencriptar_AES(AES.new(clave, AES.MODE_CBC, iv), texto_encriptado)
 solucion_encriptada = encriptar_AES(AES.new(clave, AES.MODE_CBC, iv), solucion_desencriptada)
 
-print(solucion_desencriptada)
-print(solucion_encriptada)
+print("Solución desencriptada: " + solucion_desencriptada)
+print("Solución encriptada: " + solucion_encriptada)
