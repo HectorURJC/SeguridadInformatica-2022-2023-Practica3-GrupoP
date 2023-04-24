@@ -22,5 +22,5 @@ if clave == "":
 solucion_desencriptada = desencriptar_encriptar_XOR(mensaje_encriptado, clave)
 solucion_encriptada = desencriptar_encriptar_XOR(solucion_desencriptada, clave)
 
-print(solucion_desencriptada)
-print(solucion_encriptada)
+print("Solución desencriptada: " + solucion_desencriptada)
+print("Solución encriptada: " + solucion_encriptada)
