@@ -28,6 +28,6 @@ if clave == "":
     clave = "Vigenere"
 
 solucion_desencriptada = desencriptar_vigenere(texto_encriptado, clave)
-print(solucion_desencriptada)
+print("Solución desencriptada: " + solucion_desencriptada)
 solucion_encriptada = encriptar_vigenere(solucion_desencriptada, clave)
-print(solucion_encriptada)
+print("Solución encriptada: " + solucion_encriptada)
