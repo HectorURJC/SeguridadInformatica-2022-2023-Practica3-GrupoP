@@ -10,10 +10,9 @@ def desencriptar_encriptar_XOR(mensaje = "+*5-=;¡.61!47=?9;;;.", clave = "XOR")
         solucion += letra_texto
     return solucion
 
-mensaje_encriptado = input().strip()
-clave = input().strip()
+mensaje_encriptado = input("Escriba el mensaje encriptado: \n").strip()
+clave = input("Escriba la clave: \n").strip()
 
-# Si el input del mensaje encriptado y/o el de la clave son vacíos, entonces se le pasa el mensaje encriptado y clave del enunciado
 if mensaje_encriptado == "":
     mensaje_encriptado = "+*5-=;¡.61!47=?9;;;."
 if clave == "":
