@@ -31,6 +31,6 @@ if n < 0:
     n = 0
     
 solucion_desencriptada = desencriptar_cesar(texto_encriptado, n)
-print(solucion_desencriptada)
+print("Solución desencriptada: " + solucion_desencriptada)
 solucion_encriptada = encriptar_cesar(solucion_desencriptada, n)
-print(solucion_encriptada)
+print("Solución encriptada: " + solucion_encriptada)
