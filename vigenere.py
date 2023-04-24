@@ -18,8 +18,8 @@ def encriptar_vigenere(texto_desencriptado, clave="Vigenere"):
     return solucion_encriptada
 
 
-texto_encriptado = input().strip()
-clave = input().strip()
+texto_encriptado = input("Escriba el texto encriptado: \n").strip()
+clave = input("Escriba la clave: \n").strip()
 
 # Si el input del texto encriptado y/o el de la clave son vacíos, entonces se le pasa el texto encriptado y clave del enunciado
 if texto_encriptado == "":
