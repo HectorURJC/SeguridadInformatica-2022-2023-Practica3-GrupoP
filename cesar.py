@@ -20,12 +20,15 @@ def encriptar_cesar(texto_desencriptado,n):
         solucion_encriptada += sol
     return solucion_encriptada
 
-texto_encriptado = input().strip()
-n=int(input().strip())# 6 es donde te da la clave oculta
+texto_encriptado = input("Escriba el texto encriptado: \n").strip()
+n=int(input("Escriba la posición de la clave oculta: \n").strip())# 6 es donde te da la clave oculta
 
 # Si el input del texto encriptado es vacío, entonces se le pasa el texto encriptado del enunciado
 if texto_encriptado == "":
     texto_encriptado = "MyaolcxuxChzilguncwuWymul"
+# La clave nunca puede ser menor que 0
+if n < 0:
+    n = 0
     
 solucion_desencriptada = desencriptar_cesar(texto_encriptado, n)
 print(solucion_desencriptada)
