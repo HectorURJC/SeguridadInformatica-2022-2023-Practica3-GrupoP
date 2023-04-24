@@ -17,8 +17,15 @@ def encriptar_vigenere(texto_desencriptado, clave="Vigenere"):
         solucion_encriptada += letra_encriptada if texto_desencriptado[i].isupper() else letra_encriptada.lower()
     return solucion_encriptada
 
-texto_encriptado = "QqmiaiiiYmisqmwmxijs"
-clave = "Vigenere"
+
+texto_encriptado = input().strip()
+clave = input().strip()
+
+# Si el input del texto encriptado y/o el de la clave son vacíos, entonces se le pasa el texto encriptado y clave del enunciado
+if texto_encriptado == "":
+    texto_encriptado = "QqmiaiiiYmisqmwmxijs"
+if clave == "":
+    clave = "Vigenere"
 
 solucion_desencriptada = desencriptar_vigenere(texto_encriptado, clave)
 print(solucion_desencriptada)
