@@ -10,8 +10,13 @@ def desencriptar_encriptar_XOR(mensaje = "+*5-=;¡.61!47=?9;;;.", clave = "XOR")
         solucion += letra_texto
     return solucion
 
-mensaje_encriptado = "+*5-=;¡.61!47=?9;;;."
-clave = "XOR"
+mensaje_encriptado = input().strip()
+clave = input().strip()
+
+if mensaje_encriptado == "":
+    mensaje_encriptado = "+*5-=;¡.61!47=?9;;;."
+if clave == "":
+    clave = "XOR"
 
 solucion_desencriptada = desencriptar_encriptar_XOR(mensaje_encriptado, clave)
 solucion_encriptada = desencriptar_encriptar_XOR(solucion_desencriptada, clave)
