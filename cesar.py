@@ -25,10 +25,7 @@ n=int(input("Escriba la posición de la clave oculta: \n").strip())# 6 es donde 
 
 # Si el input del texto encriptado es vacío, entonces se le pasa el texto encriptado del enunciado
 if texto_encriptado == "":
-    texto_encriptado = "MyaolcxuxChzilguncwuWymul"
-# La clave nunca puede ser menor que 0
-if n < 0:
-    n = 0
+    texto_encriptado = "MyaolcxuxChzilguncwuWymul"
     
 solucion_desencriptada = desencriptar_cesar(texto_encriptado, n)
 print("Solución desencriptada: " + solucion_desencriptada)
